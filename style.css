@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #123456;
+    --secondary-color: #ABCDEF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.54;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    margin: auto;
+}
+
+#navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: block;
+}
+
+#nav-links li a:hover {
+    background-color: hsl(188, 63%, 37%);
+    color: black;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Typewriter animation */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end), blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+#about {
+    height: 100vh;
+    background: linear-gradient(353deg, rgba(0,123,255,1) 0%, rgba(18,52,86,1) 93%);
+    color: white;
+}
+
+#welcome-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+#projects {
+    width: 100%;
+    padding: 5rem 1rem;
+    background-color: var(--secondary-color);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-text h3 {
+    margin: 0.5rem 0;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+    background: linear-gradient(353deg, rgba(0,123,255,1) 0%, rgba(18,52,86,1) 93%);
+    color: #fff;
+    padding: 4rem 1rem;
+}
+
+#contact h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+#contact p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+}
+
+.social {
+    margin-top: 2rem;
+}
+
+.social a {
+    font-family: Rockwell;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #eee;
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        display: none;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    #nav-links li {
+        text-align: right;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+}
